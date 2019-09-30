@@ -1,7 +1,7 @@
 # FROM ubuntu:16.04
 FROM debian
 
-RUN apt-get update && apt-get install -y openssh-server
+RUN apt-get update && apt-get install -y openssh-server python3
 RUN mkdir /var/run/sshd
 RUN mkdir /root/.ssh
 COPY pub_key  /root/.ssh/authorized_keys
